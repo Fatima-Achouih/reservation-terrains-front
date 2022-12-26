@@ -1,0 +1,38 @@
+
+.navbar-expand-md .navbar-collapse{
+    display: block !important;
+}
+.navbar-brand{
+    margin-right: 6rem;
+}
+.btn-nav{
+    
+    padding: 5px 22px;
+    border-radius: 0.25rem;
+    text-decoration: none!important;
+    outline: none!important;
+    box-shadow: none!important;
+    border: 1px solid;
+    
+    transition: all .3s;
+    font-size: 14px;
+    
+}
+.btn2{
+    margin-left: 1rem;
+    color: #fff;
+    border-color: #8732de !important;
+    background-color: #8732de !important;
+}
+.btn1{
+    color: #8732de;
+    border-color: #8732de !important;
+    background-color: transparent;
+}
+.log{
+    margin-right: 10rem !important;
+}
+.floza-nav .navbar .navbar-nav .nav-item a:hover, .floza-nav .navbar .navbar-nav .nav-item a:focus, .floza-nav .navbar .navbar-nav .nav-item a.active {
+    color: #8732de !important;
+}
+
