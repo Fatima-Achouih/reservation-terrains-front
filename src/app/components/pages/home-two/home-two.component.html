@@ -9,7 +9,7 @@
                             <div class="order-form">
                                 <h2>Terrains disponibles</h2>
                                 
-                                <form>
+                                
                                     <div class="form-group">
 
                                         <div  *ngIf="isApiLoaded">
@@ -19,6 +19,9 @@
                                                 (onAddressChange)="handleAddressChange($event)"
                                                 type="text" class="form-control c1" placeholder="Entrez un point de départ "
                                             />
+                                            <input type="hidden" id="city2" name="city2" />
+                                            <input type="hidden" id="cityLat" name="cityLat" />
+                                            <input type="hidden" id="cityLng" name="cityLng" />
                                         </div>
                                         
                                     </div>
@@ -31,18 +34,14 @@
 
                                         <div class="col">
                                             <div class="text-center">
-                                                <button type="submit" class="default-btn-search btn1">Track Now</button>
+                                                <button type="submit" class="default-btn-search btn1" (click)="onSearch()">Track Now</button>
                                             </div>
                                         </div>
-                                       <div class="col">
-                                        <div class="text-center">
-                                            <button type="submit" class="default-btn-search btn2">Track 10km</button>
-                                        </div>
-                                       </div>
+                                       
                                         
                                      </div>
                                    
-                                </form>
+                                
                             </div>
                         </div>
 

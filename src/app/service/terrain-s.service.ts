@@ -13,4 +13,7 @@ export class TerrainSService {
   createTerrain(ter: Terrain): Observable<Object>{
     return this.http.post(`http://localhost:9097/terrain`, ter);
   }
+  searchNearTerrain(ter: Terrain): Observable<Object>{
+    return this.http.post(`http://localhost:9097/terrain`, ter);
+  }
 }
