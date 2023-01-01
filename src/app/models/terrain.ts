@@ -4,6 +4,8 @@ export class Terrain {
     adresse: String;
     lat: number;
     lng: number;
+    descr?: String;
+    prix?: number;
 
 
 }

@@ -2,24 +2,24 @@
 <div class="container-flex">
 
 <div class="search"></div>
-<div class=" pad ">
+<div class=" pad " >
    
-        <div class="card position-relative sty">
+        <div class="card position-relative sty" *ngFor="let t of ters ">
           <img src="assets/img/blog/blog3.jpg" class="card-img-top" alt="Card image cap">
          
     <button type="submit" class="default-btn-search position-absolute btn1" >Afficher les détails</button>
           <div class="card-body">
-            <h5 class="card-title ">Card title</h5>
+            <h5 class="card-title ">{{t.nom}}</h5>
 
             <p class="card-text">
-                <i class="bx bxs-location-plus coul"></i> 123 Main Street
+                <i class="bx bxs-location-plus coul"></i> {{t.adresse}}
                 
               </p>
               
-            <p class="card-text  " style="margin-bottom:20px ;"  >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text  "   >{{t.descr}}</p>
             
                 
-            <p class="text-right  prix">19.99 <span class="dh">DH</span></p>
+            <p class="text-right  prix">{{t.prix}} <span class="dh">DH</span></p>
              
           </div>
          

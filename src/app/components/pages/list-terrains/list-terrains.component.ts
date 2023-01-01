@@ -1,3 +1,5 @@
+import { Terrain } from './../../../models/terrain';
+import { TerrainSService } from 'src/app/service/terrain-s.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListTerrainsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private terS:TerrainSService) { }
+  ters: Terrain[];
 
   ngOnInit(): void {
+    this.terS.getterrains().subscribe(data =>{  
+      this.ters =data;  
+   
+      }) 
   }
 
 }
