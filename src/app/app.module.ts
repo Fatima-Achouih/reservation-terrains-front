@@ -28,6 +28,7 @@ import { ContactComponent } from './components/pages/contact/contact.component';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { TerrainComponent } from './components/pages/terrain/terrain.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListTerrainsComponent } from './components/pages/list-terrains/list-terrains.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { HttpClientModule } from '@angular/common/http';
     BlogComponent,
     ContactComponent,
     TerrainComponent,
+    ListTerrainsComponent,
     
   ],
   imports: [

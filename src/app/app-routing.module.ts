@@ -12,6 +12,7 @@ import { GalleryComponent } from './components/pages/gallery/gallery.component';
 import { HomeOneComponent } from './components/pages/home-one/home-one.component';
 import { HomeThreeComponent } from './components/pages/home-three/home-three.component';
 import { HomeTwoComponent } from './components/pages/home-two/home-two.component';
+import { ListTerrainsComponent } from './components/pages/list-terrains/list-terrains.component';
 import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privacy-policy.component';
 import { ServicesDetailsComponent } from './components/pages/services-details/services-details.component';
 import { ServicesComponent } from './components/pages/services/services.component';
@@ -43,6 +44,7 @@ const routes: Routes = [
     {path: 'blog-details', component: BlogDetailsComponent},
     {path: 'contact', component: ContactComponent},
     {path: 'terrain', component: TerrainComponent},
+    {path: 'list-terrain', component: ListTerrainsComponent},
     
     // Here add new component
     
