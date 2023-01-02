@@ -7,7 +7,7 @@
         <div class="card position-relative sty" *ngFor="let t of ters ">
           <img src="assets/img/blog/blog3.jpg" class="card-img-top" alt="Card image cap">
          
-    <button type="submit" class="default-btn-search position-absolute btn1" >Afficher les détails</button>
+    <button (click)="terrainDetails(t.id)" type="submit" class="default-btn-search position-absolute btn1" >Afficher les détails</button>
           <div class="card-body">
             <h5 class="card-title ">{{t.nom}}</h5>
 
@@ -15,7 +15,7 @@
                 <i class="bx bxs-location-plus coul"></i> {{t.adresse}}
                 
               </p>
-              
+             
             <p class="card-text  "   >{{t.descr}}</p>
             
                 

@@ -3,6 +3,7 @@ import { Terrain } from './../../../models/terrain';
 import { DOCUMENT } from '@angular/common';
 import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { Address } from 'ngx-google-places-autocomplete/objects/address';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-terrain',
@@ -14,6 +15,7 @@ export class TerrainComponent implements OnInit {
   ter: Terrain = new Terrain();
   isApiLoaded = false;
   add: Address = new Address()
+  id : number
   
   
   options: any = {
@@ -26,6 +28,8 @@ export class TerrainComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document,
     private elementRef: ElementRef,
     private terS: TerrainSService,
+
+    private route: ActivatedRoute,
     
 
   ) { }
@@ -39,7 +43,8 @@ export class TerrainComponent implements OnInit {
     this.loadScript().then(() =>{
       this.isApiLoaded = true
     })
-   
+    this.id = this.route.snapshot.params['id'];
+    console.log(this.id)
   }
 
   loadScript() {

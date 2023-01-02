@@ -1,3 +1,5 @@
+import { TerrainDetailsComponent } from './components/pages/terrain-details/terrain-details.component';
+
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -45,6 +47,7 @@ const routes: Routes = [
     {path: 'contact', component: ContactComponent},
     {path: 'terrain', component: TerrainComponent},
     {path: 'list-terrain', component: ListTerrainsComponent},
+    {path: 'terrain/:id', component: TerrainDetailsComponent },
     
     // Here add new component
     

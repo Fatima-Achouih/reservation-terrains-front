@@ -1,6 +1,7 @@
 import { Terrain } from './../../../models/terrain';
 import { TerrainSService } from 'src/app/service/terrain-s.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-terrains',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListTerrainsComponent implements OnInit {
 
-  constructor(private terS:TerrainSService) { }
+  constructor(private terS:TerrainSService, private router: Router) { }
   ters: Terrain[];
 
   ngOnInit(): void {
@@ -18,5 +19,8 @@ export class ListTerrainsComponent implements OnInit {
    
       }) 
   }
+  terrainDetails(id: number){
 
+    this.router.navigate(['terrain', id]);
+  }
 }
