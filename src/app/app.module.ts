@@ -31,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListTerrainsComponent } from './components/pages/list-terrains/list-terrains.component';
 import { TerrainDetailsComponent } from './components/pages/terrain-details/terrain-details.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

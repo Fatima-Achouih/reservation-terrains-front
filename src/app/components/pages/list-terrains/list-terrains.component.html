@@ -1,11 +1,11 @@
 <div class="global">
 <div class="container-flex">
 
-<div class="search"></div>
+
 <div class=" pad " >
    
         <div class="card position-relative sty" *ngFor="let t of ters ">
-          <img src="assets/img/blog/blog3.jpg" class="card-img-top" alt="Card image cap">
+          <img src="assets/img/pic.jpg" class="card-img-top" alt="Card image cap">
          
     <button (click)="terrainDetails(t.id)" type="submit" class="default-btn-search position-absolute btn1" >Afficher les détails</button>
           <div class="card-body">
@@ -15,6 +15,7 @@
                 <i class="bx bxs-location-plus coul"></i> {{t.adresse}}
                 
               </p>
+              
              
             <p class="card-text  "   >{{t.descr}}</p>
             
