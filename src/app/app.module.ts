@@ -30,6 +30,9 @@ import { TerrainComponent } from './components/pages/terrain/terrain.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListTerrainsComponent } from './components/pages/list-terrains/list-terrains.component';
 import { TerrainDetailsComponent } from './components/pages/terrain-details/terrain-details.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid'; 
+import interactionPlugin from '@fullcalendar/interaction'; 
 
 
 @NgModule({
@@ -67,6 +70,7 @@ import { TerrainDetailsComponent } from './components/pages/terrain-details/terr
     AppRoutingModule,
     GooglePlaceModule,
     HttpClientModule,
+    FullCalendarModule // register FullCalendar with your app
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CalendarOptions } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+
 
 @Component({
   selector: 'app-terrain-details',
@@ -14,4 +18,20 @@ export class TerrainDetailsComponent implements OnInit {
     console.log(this.route.snapshot.params['id'])
   }
 
+  calendarOptions: CalendarOptions = {
+    plugins: [timeGridPlugin],
+    
+    initialView: 'timeGridWeek',
+    weekends: false,
+    allDaySlot:false,
+    slotEventOverlap: false,
+    slotDuration: '01:00:00',
+    slotMinTime: '07:00:00',
+    slotMaxTime: '24:00:00',
+    scrollTimeReset: false,
+    expandRows: true,
+    events: [
+      { title: 'Meeting', start: new Date() }
+    ]
+  };
 }
