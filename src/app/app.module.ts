@@ -32,7 +32,8 @@ import { ListTerrainsComponent } from './components/pages/list-terrains/list-ter
 import { TerrainDetailsComponent } from './components/pages/terrain-details/terrain-details.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid'; 
-import interactionPlugin from '@fullcalendar/interaction'; 
+import interactionPlugin from '@fullcalendar/interaction';
+
 
 
 @NgModule({
@@ -63,6 +64,7 @@ import interactionPlugin from '@fullcalendar/interaction';
     TerrainComponent,
     ListTerrainsComponent,
     TerrainDetailsComponent,
+   
     
   ],
   imports: [

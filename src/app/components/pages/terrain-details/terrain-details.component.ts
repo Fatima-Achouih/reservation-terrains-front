@@ -21,7 +21,9 @@ export class TerrainDetailsComponent implements OnInit {
   calendarOptions: CalendarOptions = {
     plugins: [timeGridPlugin],
     
+    
     initialView: 'timeGridWeek',
+    
     weekends: false,
     allDaySlot:false,
     slotEventOverlap: false,
@@ -31,7 +33,9 @@ export class TerrainDetailsComponent implements OnInit {
     scrollTimeReset: false,
     expandRows: true,
     events: [
-      { title: 'Meeting', start: new Date() }
+      { title: 'Meeting',  start: '2023-01-12T08:00', end: '2023-01-12T10:00',backgroundColor:'green'},
+
+      
     ]
   };
 }
