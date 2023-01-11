@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CalendarOptions } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
+import { ResServiceService } from 'src/app/service/res-service.service';
 
 
 @Component({
@@ -12,11 +13,25 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 })
 export class TerrainDetailsComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private rs: ResServiceService) { }
+
+  
+  eventss: any =[]
 
   ngOnInit(): void {
     console.log(this.route.snapshot.params['id'])
+    this.getRes()
   }
+  private getRes(){
+    this.rs.getRes().subscribe(data => {
+     this.eventss = data;
+      console.log(this.eventss)
+      this.calendarOptions.events=this.eventss
+     
+      
+    });
+  }
+  
 
   calendarOptions: CalendarOptions = {
     plugins: [timeGridPlugin],
@@ -32,10 +47,11 @@ export class TerrainDetailsComponent implements OnInit {
     slotMaxTime: '24:00:00',
     scrollTimeReset: false,
     expandRows: true,
-    events: [
-      { title: 'Meeting',  start: '2023-01-12T08:00', end: '2023-01-12T10:00',backgroundColor:'green'},
-
-      
-    ]
+    
+   
+    
+    
   };
+
+ 
 }
