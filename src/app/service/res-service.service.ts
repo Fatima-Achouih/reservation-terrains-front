@@ -16,5 +16,7 @@ export class ResServiceService {
 
    createRes(reserv:Res): Observable<Object>{
     return this.http.post(`http://localhost:9097/res`, reserv);
+
+    
   }
 }

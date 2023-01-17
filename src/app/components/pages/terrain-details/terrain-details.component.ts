@@ -21,6 +21,7 @@ export class TerrainDetailsComponent implements OnInit {
   res: Res = new Res();
 
   ngOnInit(): void {
+    this.res.terrId=this.route.snapshot.params['id'];
     console.log(this.route.snapshot.params['id'])
     this.getRes()
   }
