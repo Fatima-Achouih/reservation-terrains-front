@@ -19,4 +19,8 @@ export class ResServiceService {
 
     
   }
+
+  getResT(id:string): Observable<any> {  
+    return this.http.get(`http://localhost:9097/res/${id}`);  
+  } 
 }

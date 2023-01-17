@@ -26,7 +26,7 @@ export class TerrainDetailsComponent implements OnInit {
     this.getRes()
   }
   private getRes(){
-    this.rs.getRes().subscribe(data => {
+    this.rs.getResT(this.route.snapshot.params['id']).subscribe(data => {
      this.eventss = data;
       console.log(this.eventss)
       this.calendarOptions.events=this.eventss
@@ -42,7 +42,7 @@ export class TerrainDetailsComponent implements OnInit {
     
     initialView: 'timeGridWeek',
     
-    weekends: false,
+    
     allDaySlot:false,
     slotEventOverlap: false,
     slotDuration: '01:00:00',
