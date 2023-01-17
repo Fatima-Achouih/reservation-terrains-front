@@ -33,6 +33,7 @@ import { TerrainDetailsComponent } from './components/pages/terrain-details/terr
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid'; 
 import interactionPlugin from '@fullcalendar/interaction';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -72,7 +73,9 @@ import interactionPlugin from '@fullcalendar/interaction';
     AppRoutingModule,
     GooglePlaceModule,
     HttpClientModule,
+    FormsModule,
     FullCalendarModule // register FullCalendar with your app
+
   ],
   providers: [],
   bootstrap: [AppComponent]

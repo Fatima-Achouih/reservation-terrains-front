@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CalendarOptions } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
+import { Res } from 'src/app/models/res';
 import { ResServiceService } from 'src/app/service/res-service.service';
 
 
@@ -17,6 +18,7 @@ export class TerrainDetailsComponent implements OnInit {
 
   
   eventss: any =[]
+  res: Res = new Res();
 
   ngOnInit(): void {
     console.log(this.route.snapshot.params['id'])
@@ -54,4 +56,15 @@ export class TerrainDetailsComponent implements OnInit {
   };
 
  
+  onSubmit(){
+    console.log(this.res);
+    this.saveRes();
+  }
+  saveRes(){
+    this.rs.createRes(this.res).subscribe( data =>{
+      console.log(data);
+      
+    });
+    //error => console.log(error));
+  }
 }

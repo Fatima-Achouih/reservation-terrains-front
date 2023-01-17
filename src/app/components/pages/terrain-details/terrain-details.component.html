@@ -13,26 +13,26 @@
                 <h2 class="title">Réserver le terrain</h2>
                 
                 
-                   
+                <form (ngSubmit) = "onSubmit()" class="forms-sample">
 
                   
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Nom">
+                        <input type="text" [(ngModel)] = "res.nom" name="nom" class="form-control" placeholder="Nom">
 
                     </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" class="form-control" placeholder="Email" [(ngModel)] = "res.email" name="email">
 
                         </div>
 
 
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Tel">
+                            <input type="text" class="form-control" placeholder="Tel" [(ngModel)] = "res.tel" name="tel">
 
                         </div>
 
                         <div class="form-group">
-                            <input type="date" class="form-control" placeholder="Saisir une date">
+                            <input type="date" class="form-control" placeholder="Saisir une date" [(ngModel)] = "res.date" name="date">
 
                         </div>
 
@@ -41,7 +41,7 @@
                             <div class="row">
 
                             <div class="col">
-                                <select name="hi" id="hi" class="form-control" placeholder="Heure début">
+                                <select name="hi" id="hi" class="form-control" placeholder="Heure début" [(ngModel)] = "res.hi" >
                                     <option value="" disabled selected><span class="s-holder" >Début</span></option>
                                     <option value="07:00">07:00</option>
                                     <option value="08:00">08:00</option>
@@ -66,7 +66,7 @@
                            
 
                             <div class="col">
-                                <select name="hi" id="hi" class="form-control" placeholder="Heure début">
+                                <select name="hf" id="hf" class="form-control" placeholder="Heure début" [(ngModel)] = "res.hf" >
                                     <option value="" disabled selected><span class="s-holder" >Fin</span></option>
                                     <option value="07:00">07:00</option>
                                     <option value="08:00">08:00</option>
@@ -104,8 +104,9 @@
                      </div>
 
                    
-                
-            </div>
+                </form>
+            
+                    </div>
        
     </div>
 
