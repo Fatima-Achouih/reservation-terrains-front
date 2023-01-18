@@ -1,3 +1,4 @@
+import { Eror } from './../../../models/eror';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CalendarOptions } from '@fullcalendar/core';
@@ -19,6 +20,7 @@ export class TerrainDetailsComponent implements OnInit {
   
   eventss: any =[]
   res: Res = new Res();
+  eror: Eror= new Eror();
 
   ngOnInit(): void {
     this.res.terrId=this.route.snapshot.params['id'];
@@ -63,9 +65,13 @@ export class TerrainDetailsComponent implements OnInit {
   }
   saveRes(){
     this.rs.createRes(this.res).subscribe( data =>{
-      console.log(data);
+      this.eror=data
+      console.log(this.eror)
+      console.log(this.eror.message);
       
+      alert(this.eror.message);
+     
     });
-    //error => console.log(error));
+    
   }
 }
