@@ -26,7 +26,7 @@ import { TerrainComponent } from './components/pages/terrain/terrain.component';
 import { TestimonialsComponent } from './components/pages/testimonials/testimonials.component';
 
 const routes: Routes = [
-    {path: '', component: HomeOneComponent},
+    {path: '', component: HomeTwoComponent},
     {path: 'home-two', component: HomeTwoComponent},
     {path: 'home-three', component: HomeThreeComponent},
     {path: 'about', component: AboutComponent},
