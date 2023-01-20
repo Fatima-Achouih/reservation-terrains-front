@@ -40,7 +40,9 @@
                 "node_modules/magnific-popup/dist/magnific-popup.css",
                 "src/styles.scss",
                 "src/responsive.scss",
-                "node_modules/leaflet/dist/leaflet.css"
+                "node_modules/leaflet/dist/leaflet.css",
+                "node_modules/leaflet-search/dist/leaflet-search.min.css",
+                "node_modules/leaflet-control-geocoder/dist/Control.Geocoder.css"
             ],
             "scripts": [
                 "node_modules/jquery/dist/jquery.min.js",

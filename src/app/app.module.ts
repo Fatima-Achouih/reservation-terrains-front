@@ -36,6 +36,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { FormsModule } from '@angular/forms';
 import { MapTestComponent } from './map-test/map-test.component';
+import { TerrainSearchComponent } from './components/pages/terrain-search/terrain-search.component';
 
 
 
@@ -68,6 +69,7 @@ import { MapTestComponent } from './map-test/map-test.component';
     ListTerrainsComponent,
     TerrainDetailsComponent,
     MapTestComponent,
+    TerrainSearchComponent,
    
    
     

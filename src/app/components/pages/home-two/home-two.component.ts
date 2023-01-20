@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, ElementRef, Inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Address } from 'ngx-google-places-autocomplete/objects/address';
 import { Terrain } from 'src/app/models/terrain';
 import { TerrainSService } from 'src/app/service/terrain-s.service';
@@ -21,6 +22,7 @@ export class HomeTwoComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document,
     private elementRef: ElementRef,
     private terS: TerrainSService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -33,7 +35,7 @@ export class HomeTwoComponent implements OnInit {
     return new Promise((resolve, reject) => {
       const element = this.document.createElement('script');
       element.type = 'text/javascript';
-      element.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCSNW7Pt4PQZ7qxeT6rrTAQoBqpcw51KBE&libraries=places';
+      element.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBToKH7XSnC4w88wACCXboAQhK0-kMGOAA&libraries=places';
       element.onload = resolve;
       element.onerror = reject;
       this.elementRef.nativeElement.appendChild(element);
@@ -56,10 +58,17 @@ export class HomeTwoComponent implements OnInit {
     this.ter.lat=Number((<HTMLInputElement>document.getElementById('cityLat')).value);
     this.ter.lng=Number( (<HTMLInputElement>document.getElementById('cityLng')).value);
     console.log(this.ter)
-
+    this.rout(this.ter.adresse, this.ter.lat, this.ter.lng)
     this.terS.searchNearTerrain(this.ter).subscribe( data =>{
       console.log(data);
       //this.goToEmployeeList();
+      
     });
+
+    
+}
+rout(adresse: String,lat:number,lng:number){
+  this.router.navigate(['/search', adresse, lat, lng]);
+
 
 }}

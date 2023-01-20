@@ -1,3 +1,4 @@
+import { TerrainSearchComponent } from './components/pages/terrain-search/terrain-search.component';
 import { MapTestComponent } from './map-test/map-test.component';
 import { TerrainDetailsComponent } from './components/pages/terrain-details/terrain-details.component';
 
@@ -50,6 +51,7 @@ const routes: Routes = [
     {path: 'list-terrain', component: ListTerrainsComponent},
     {path: 'terrain/:id', component: TerrainDetailsComponent },
     {path: 'lf', component: MapTestComponent },
+    {path: 'search/:adresse/:lat/:lng', component: TerrainSearchComponent },
     
     // Here add new component
     
