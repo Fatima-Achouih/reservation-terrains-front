@@ -51,7 +51,7 @@ export class TerrainComponent implements OnInit {
     return new Promise((resolve, reject) => {
       const element = this.document.createElement('script');
       element.type = 'text/javascript';
-      element.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCSNW7Pt4PQZ7qxeT6rrTAQoBqpcw51KBE&libraries=places';
+      element.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBToKH7XSnC4w88wACCXboAQhK0-kMGOAA&libraries=places';
       element.onload = resolve;
       element.onerror = reject;
       this.elementRef.nativeElement.appendChild(element);
